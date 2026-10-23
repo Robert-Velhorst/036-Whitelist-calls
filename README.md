@@ -4,6 +4,20 @@ Whitelist Calls is a root-required Android call firewall that allows incoming ca
 
 The product covers both conventional cellular calls and supported communication apps such as WhatsApp, WeChat, Telegram, Signal, and Facebook Messenger. It is not a conventional Play Store application. It is a deeply integrated Android security product built around a privileged policy engine and version-specific channel adapters.
 
+## Implementation status
+
+This repository currently contains an initial, non-root Android implementation under [`android/`](android/). It screens cellular calls with the platform `CallScreeningService` and observes WhatsApp and WeChat call notifications through notification access. The root-based privileged layer, versioned channel adapters, and fail-closed integrity model described below are not implemented yet.
+
+### Build
+
+Requirements: JDK 17 or later (built and tested with JDK 22) and an Android SDK with API 35. Point the build at your SDK through `ANDROID_HOME` or by creating `android/local.properties` with `sdk.dir=<path>`.
+
+```sh
+cd android
+./gradlew assembleDebug        # APK: android/app/build/outputs/apk/debug/app-debug.apk
+./gradlew testDebugUnitTest    # unit tests
+```
+
 ## Product principles
 
 - Deny by default.

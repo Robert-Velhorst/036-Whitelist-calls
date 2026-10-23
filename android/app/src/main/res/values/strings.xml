@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Whitelist Calls</string>
+    <string name="screening_service_name">Whitelist Calls Screening</string>
+</resources>

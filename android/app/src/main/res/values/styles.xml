@@ -1,0 +1,14 @@
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:colorAccent">#4D80FF</item>
+        <item name="android:windowBackground">#0E0E1A</item>
+        <item name="android:navigationBarColor">#0E0E1A</item>
+        <item name="android:statusBarColor">#0E0E1A</item>
+        <item name="android:editTextStyle">@style/InputStyle</item>
+    </style>
+    <style name="InputStyle" parent="android:style/Widget.EditText">
+        <item name="android:textColorHint">#444466</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>
